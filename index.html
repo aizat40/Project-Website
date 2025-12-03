@@ -560,7 +560,15 @@
         </div>
     </div>
     <!-- Testimonial End -->
+<div class="container">
+        <h2>♻️ Penjana Idea Upcycling</h2>
+        <p>Masukkan bahan buangan yang anda ada:</p>
+        
+        <input type="text" id="bahanInput" placeholder="Contoh: Botol Plastik & Kain Perca">
+        <button onclick="panggilAI()">Jana Idea!</button>
 
+        <div id="hasil">Jawapan akan keluar di sini...</div>
+    </div>
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -594,6 +602,57 @@
 
 
     <!-- JavaScript Libraries -->
+     <script>
+        async function panggilAI() {
+            // 1. Ambil input dari pengguna
+            const bahan = document.getElementById('bahanInput').value;
+            const kotakHasil = document.getElementById('hasil');
+            
+            // Tunjuk status 'Loading'
+            kotakHasil.innerText = "Sedang berfikir... Sila tunggu...";
+
+            // 2. Masukkan API Key anda di sini (Dari gambar yang anda hantar)
+            const apiKey = "3175e3b60eff40299a43620dd7d46cf0"; 
+
+            // 3. Tetapkan 'Prompt' (Arahan kepada AI)
+            // Ini bahagian paling PENTING untuk kreativiti
+            const systemPrompt = "Anda adalah pakar inovasi lestari. Pengguna akan beri nama bahan buangan. Anda perlu berikan 3 idea kreatif, mudah, dan praktikal untuk menukar bahan itu menjadi produk berguna. Berikan jawapan dalam Bahasa Melayu.";
+
+            try {
+                // 4. Hantar permintaan ke Server (Fetch)
+                const response = await fetch('https://api.aimlapi.com/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${apiKey}`
+                    },
+                    body: JSON.stringify({
+                        model: "gpt-3.5-turbo", // Atau model lain yang disokong oleh aimlapi
+                        messages: [
+                            { role: "system", content: systemPrompt },
+                            { role: "user", content: `Saya ada bahan ini: ${bahan}. Apa saya boleh buat?` }
+                        ],
+                        temperature: 0.7
+                    })
+                });
+
+                // 5. Proses jawapan
+                const data = await response.json();
+                
+                if(data.choices && data.choices.length > 0){
+                    const ideaAI = data.choices[0].message.content;
+                    kotakHasil.innerText = ideaAI; // Papar jawapan di skrin
+                } else {
+                    kotakHasil.innerText = "Maaf, tiada idea dapat dijana. Sila cuba lagi.";
+                    console.error("Error:", data);
+                }
+
+            } catch (error) {
+                kotakHasil.innerText = "Berlaku ralat sambungan.";
+                console.error("Fetch error:", error);
+            }
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
