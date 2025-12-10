@@ -170,7 +170,7 @@
 
 .page-header {
     padding-top: 200px;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/carousel-1.jpg) top center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../img/smartmatch.png) top center no-repeat;
     background-size: cover;
 }
 
@@ -405,4 +405,105 @@
 	background-position: 0px 0px;
     background-repeat: repeat-x;
 	animation: footerAnimatedBg 50s linear infinite;
+}
+
+/* Footer social buttons: on hover show brand green background and white icon */
+.footer .btn {
+    transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+.footer .btn:hover,
+.footer .btn:focus {
+    background-color: #89D289 !important;
+    color: #ffffff !important;
+    border-color: #89D289 !important;
+}
+.footer .btn:hover i,
+.footer .btn:focus i {
+    color: #ffffff !important;
+}
+
+/* Section gray: subtle grey background for content blocks that sit on dark pages */
+.section-gray {
+    background-color: #2b2b2b; /* medium-dark gray that pairs with black */
+    border-radius: 12px;
+    padding: 1.5rem; /* small inset so inner card has breathing room */
+    margin-top: 80px; /* spacing from navigation */
+}
+.section-gray .card {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 991.98px) {
+    .section-gray { margin-top: 60px; }
+}
+
+/* White container pop on hover/focus: subtle lift + stronger shadow */
+.white-pop {
+    transition: transform .28s cubic-bezier(.22,.9,.36,1), box-shadow .28s cubic-bezier(.22,.9,.36,1);
+    will-change: transform, box-shadow;
+}
+.white-pop:hover,
+.white-pop:focus-within {
+    transform: translateY(-15px);
+    box-shadow: 0 18px 46px rgba(0,0,0,0.45);
+}
+.white-pop:active { transform: translateY(-6px); }
+
+/* Optional: make the effect less pronounced on small screens */
+@media (max-width: 575.98px) {
+    .white-pop:hover,
+    .white-pop:focus-within {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+}
+
+/* Input outline: use brand green on focus (use hex, not language names) */
+.form-control:focus,
+.form-select:focus {
+    border-color: #89D289 !important;
+    outline: 3px solid rgba(137,210,137,0.14); /* subtle green outline */
+    outline-offset: 2px;
+    box-shadow: none !important;
+}
+.form-control:focus-visible,
+.form-select:focus-visible {
+    border-color: #89D289 !important;
+    outline: 3px solid rgba(137,210,137,0.22);
+    outline-offset: 2px;
+}
+
+/* Generate button hover effect: lift and shadow */
+#generateBtn {
+    transition: transform .28s cubic-bezier(.22,.9,.36,1), box-shadow .28s cubic-bezier(.22,.9,.36,1), background-color .28s ease;
+    will-change: transform, box-shadow, background-color;
+    
+    color: #000;
+}
+#generateBtn:hover,
+#generateBtn:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(137,210,137,0.35);
+    background-color: #7bc877;
+    border-color: #7bc877;
+    color: #ffffff !important;
+}
+#generateBtn:active {
+    transform: translateY(-2px);
+}
+
+/* Input field #ai hover effect: lift and shadow */
+#ai {
+    transition: transform .24s cubic-bezier(.22,.9,.36,1), box-shadow .24s cubic-bezier(.22,.9,.36,1), border-color .24s ease;
+    will-change: transform, box-shadow;
+}
+#ai:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(137,210,137,0.25);
+    border-color: #89D289 !important;
+}
+#ai:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(137,210,137,0.3);
+    border-color: #89D289 !important;
 }
