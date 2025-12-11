@@ -32,13 +32,54 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+    .btn-custom-green {
+    transition: transform .28s cubic-bezier(.22,.9,.36,1), box-shadow .28s cubic-bezier(.22,.9,.36,1), background-color .28s ease;
+    will-change: transform, box-shadow, background-color;
+    color: #89D289; 
+    border-color: #89D289; 
+    background-color: transparent !important;
+}
+.btn-custom-green:hover{
+    transform: translateY(-4px);
+    background-color: #89D289 !important; 
+    color: #ffffff !important; 
+    border-color: #89D289 !important;
+}
+
+.btn-custom-green:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 0.25rem rgba(137, 210, 137, 0.5);
+}
+
+    /* Ubah warna background item dropdown bila Hover */
+    .dropdown-item:hover, .dropdown-item:focus {
+        background-color: #89D289 !important; /* Warna Hijau Tema Anda */
+        color: #ffffff !important; /* Tukar tulisan jadi putih supaya mudah dibaca */
+    }
+
+    /* Pilihan: Jika anda nak item yang sedang 'active' juga hijau */
+    .dropdown-item.active, .dropdown-item:active {
+        background-color: #89D289 !important;
+        color: #ffffff !important;
+    }
+    .col-custom-item {
+        transition: transform .28s cubic-bezier(.22,.9,.36,1), box-shadow .28s cubic-bezier(.22,.9,.36,1), background-color .28s ease;
+    will-change: transform, box-shadow, background-color;
+    }
+    .col-custom-item:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 0 15px rgba(137, 210, 137, 0.5);
+    }
+    </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <div class="spinner-grow text" style="width: 3rem; height: 3rem;color: #89D289;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
@@ -87,7 +128,7 @@
                         <p class="fs-5 mb-5 animated slideInDown">Transform everyday waste into sustainable innovations. Eco-Match empowers 
                             <br>you to reimagine discarded materials with creative upcycling 
                             <br>solutions, helping us build a zero-waste future together.</p>
-                        <a href="#!" class="btn btn-outline border-2 py-3 px-5 animated slideInDown" style="color: #89D289; border-color: #89D289;">
+                        <a href="#!" class="btn btn-outline border-2 py-3 px-5 animated slideInDown btn-custom-green">
                             Explore More
                         </a>
                     </div>
@@ -103,7 +144,7 @@
                         </div>
                         <p class="fs-5 mb-5 animated slideInDown">Don't just throw it away.<br> 
                         Discover creative ways to transform your trash into sustainable, useful products.</p>
-                        <a href="#!" class="btn btn-outline border-2 py-3 px-5 animated slideInDown" style="color: #89D289; border-color: #89D289;">
+                        <a href="#!" class="btn btn-outline border-2 py-3 px-5 animated slideInDown btn-custom-green">
                             Explore More
                         </a>
                     </div>
@@ -152,10 +193,10 @@
                         </ul>
                         <div class="row wow fadeInUp" data-wow-delay="0.4s">
                             <div class="col-6">
-                                <a href="index.html" class="btn border-2 py-3 w-100" style="color: #89D289; border-color: #89D289;">Start Upcycling</a>
+                                <a href="index.html" class="btn border-2 py-3 w-100 btn-custom-green">Start Upcycling</a>
                             </div>
                             <div class="col-6">
-                                <a href="contact.html" class="btn py-3 w-100" style="background-color: #89D289; border-color: #89D289; color: white;">Contact Us</a>
+                                <a href="contact.html" class="btn border-2 py-3 w-100 btn-custom-green">Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -196,7 +237,7 @@
                                 common household waste with hundreds of verified DIY upcycling projects. 
                                 Select your material and discover what you can create in seconds.
                             </p>
-                            <a class="btn border-2 px-4" href="#!" style="color: #89D289; border-color: #89D289;">
+                            <a class="btn border-2 px-4 btn-custom-green" href="#!">
                                 Try It Now <i class="fa fa-arrow-right ms-1"></i>
                             </a>
                         </div>
@@ -219,7 +260,7 @@
                                 generates unique, custom upcycling ideas based on the specific combination of 
                                 waste items you have. Get a personalized step-by-step guide just for you.
                             </p>
-                            <a class="btn border-2 px-4" href="#!" style="color: #89D289; border-color: #89D289;">
+                            <a class="btn border-2 px-4 btn-custom-green" href="service.html">
                                 Ask The AI <i class="fa fa-arrow-right ms-1"></i>
                             </a>
                         </div>
@@ -242,7 +283,7 @@
                                 tutorials and illustrated guides. Learn how to safely cut glass bottles, 
                                 join wood scraps, and stitch fabric scraps like a pro.
                             </p>
-                            <a class="btn border-2 px-4" href="#!" style="color: #89D289; border-color: #89D289;">
+                            <a class="btn border-2 px-4 btn-custom-green" href="#!" style="color: #89D289; border-color: #89D289;">
                                 View Guides <i class="fa fa-arrow-right ms-1"></i>
                             </a>
                         </div>
@@ -265,7 +306,7 @@
                                 gallery. Inspire others, share tips, and get feedback from fellow eco-warriors 
                                 and DIY enthusiasts.
                             </p>
-                            <a class="btn border-2 px-4" href="#!" style="color: #89D289; border-color: #89D289;">
+                            <a class="btn border-2 px-4 btn-custom-green" href="#!" style="color: #89D289; border-color: #89D289;">
                                 Join Community <i class="fa fa-arrow-right ms-1"></i>
                             </a>
                         </div>
@@ -288,7 +329,7 @@
                 </div>
             </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp col-custom-item" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="team-body">
                             <div class="team-before">
@@ -308,7 +349,7 @@
                             </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp col-custom-item" data-wow-delay="0.3s">
                     <div class="team-item">
                         <div class="team-body">
                             <div class="team-before">
@@ -328,7 +369,7 @@
                             </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp col-custom-item" data-wow-delay="0.5s">
                     <div class="team-item">
                         <div class="team-body">
                             <div class="team-before">
@@ -388,16 +429,6 @@
         </div>
     </div>
 </div>
-    <!-- Testimonial End -->
-<div class="container">
-        <h2>♻️ Penjana Idea Upcycling</h2>
-        <p>Masukkan bahan buangan yang anda ada:</p>
-        
-        <input type="text" id="bahanInput" placeholder="Contoh: Botol Plastik & Kain Perca">
-        <button onclick="panggilAI()">Jana Idea!</button>
-
-        <div id="hasil">Jawapan akan keluar di sini...</div>
-    </div>
 
     <!-- Footer Start -->
     <footer>
@@ -408,13 +439,13 @@
                         class="fa-solid fa-recycle me-1"></i>Eco-match</h1>
             </a>
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-lg-square btn-outline border-2 m-1" style="color: #89D289; border-color: #89D289;" href="https://x.com/" target="_blank"><i
+                <a class="btn btn-lg-square btn-outline border-2 m-1 btn-custom-green" style="color: #89D289; border-color: #89D289;" href="https://x.com/" target="_blank"><i
                         class="fab fa-x-twitter"></i></a>
-                <a class="btn btn-lg-square btn-outline border-2 m-1" style="color: #89D289; border-color: #89D289;" href="https://www.facebook.com/" target="_blank"><i
+                <a class="btn btn-lg-square btn-outline border-2 m-1 btn-custom-green" style="color: #89D289; border-color: #89D289;" href="https://www.facebook.com/" target="_blank"><i
                         class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-lg-square btn-outline border-2 m-1" style="color: #89D289; border-color: #89D289;" href="https://www.youtube.com/" target="_blank"><i
+                <a class="btn btn-lg-square btn-outline border-2 m-1 btn-custom-green" style="color: #89D289; border-color: #89D289;" href="https://www.youtube.com/" target="_blank"><i
                         class="fab fa-youtube"></i></a>
-                <a class="btn btn-lg-square btn-outline border-2 m-1" style="color: #89D289; border-color: #89D289;" href="https://www.linkedin.com/" target="_blank"><i
+                <a class="btn btn-lg-square btn-outline border-2 m-1 btn-custom-green" style="color: #89D289; border-color: #89D289;" href="https://www.linkedin.com/" target="_blank"><i
                         class="fab fa-linkedin-in"></i></a>
             </div>
             <p>&copy; Group 10, All Right Reserved.</p>
@@ -429,7 +460,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-outline border-2 btn-lg-square back-to-top" style="color: #89D289; border-color: #89D289;"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-outline border-2 btn-lg-square back-to-top btn-custom-green"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

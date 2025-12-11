@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Poseify - Modeling Agency Website Template</title>
+    <title>Eco-Match Website</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logo.png" rel="icon" style="width: 40px; height: 40px; object-fit: contain;">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,13 +32,44 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .btn-custom-green {
+            transition: transform .28s cubic-bezier(.22,.9,.36,1), box-shadow .28s cubic-bezier(.22,.9,.36,1), background-color .28s ease;
+            will-change: transform, box-shadow, background-color;
+            color: #89D289; 
+            border-color: #89D289; 
+            background-color: transparent !important;
+        }
+        .btn-custom-green:hover{
+            transform: translateY(-4px);
+            background-color: #89D289 !important; 
+            color: #ffffff !important; 
+            border-color: #89D289 !important;
+        }
+
+        .btn-custom-green:focus {
+            transform: translateY(-1px);
+            box-shadow: 0 0 0 0.25rem rgba(137, 210, 137, 0.5);
+        }
+            /* Ubah warna background item dropdown bila Hover */
+        .dropdown-item:hover, .dropdown-item:focus {
+            background-color: #89D289 !important; /* Warna Hijau Tema Anda */
+            color: #ffffff !important; /* Tukar tulisan jadi putih supaya mudah dibaca */
+        }
+
+            /* Pilihan: Jika anda nak item yang sedang 'active' juga hijau */
+        .dropdown-item.active, .dropdown-item:active {
+            background-color: #89D289 !important;
+            color: #ffffff !important;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <div class="spinner-grow text" style="width: 3rem; height: 3rem;color: #89D289;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
@@ -64,7 +95,7 @@
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Service</a>
                         <div class="dropdown-menu m-0">
                             <a href="testimonial.html" class="dropdown-item">Smart Material Match</a>
-                            <a href="service.html" class="dropdown-item">AI Idea Generator</a>
+                            <a href="service.html" class="dropdown-item active">AI Idea Generator</a>
                             <a href="404.html" class="dropdown-item">Expert Tutorials</a>
                         </div>
                     </div>
@@ -87,50 +118,68 @@
     </div>
     <!-- Header End -->
 
-    <!-- AI Idea Generator Info Section -->
-    <div class="container py-5 mb-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card shadow-sm white-pop bg-secondary">
-                    <div class="card-body p-5">
-                        <div class="text-center">
-                            <div class="title wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="title-center">
-                                    <h5 class="text-uppercase" style="color: #89D289;">Introduction</h5>
-                                    <h1 class="display-5 mb-1">Ai idea generator</h1>
+    <div class="container-fluid py-5 wow fadeInUp px-0" data-wow-delay="0.1s">
+    <div class="row justify-content-center m-0">
+        <div class="col-12">
+            <div class="card shadow-sm white-pop bg-secondary rounded-0 border-0">
+                <div class="card-body p-5">
+                    
+                    <div class="row align-items-center">
+                        
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <div class="text-left">
+                                <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="title-left">
+                                        <h5 class="text-uppercase" style="color: #89D289;">Introduction</h5>
+                                        <h1 class="display-5 mb-1">Ai idea generator</h1>
+                                    </div>
                                 </div>
                             </div>
+                            
+                            <p class="card-text wow fadeInUp" data-wow-delay="0.2s">
+                                Our AI-powered Upcycling Idea Generator uses advanced artificial intelligence to transform waste materials into creative, sustainable innovations. Simply enter any waste material you have, and our AI will generate 10 unique, practical ideas.
+                            </p>
+                            
+                            <h5 class="mt-4 mb-3 wow fadeInUp" data-wow-delay="0.3s" style="color: #89D289;">
+                                How it Works:
+                            </h5>
+                            <ul class="list-unstyled wow fadeInUp" data-wow-delay="0.4s">
+                                <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #89D289;"></i> Enter your waste material name</li>
+                                <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #89D289;"></i> AI analyzes and generates creative ideas</li>
+                                <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #89D289;"></i> Receive practical upcycling suggestions</li>
+                                <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #89D289;"></i> Join the zero-waste movement</li>
+                            </ul>
+                            
+                            <p class="card-text mt-4 wow fadeInUp" data-wow-delay="0.5s" style="font-size: 0.95rem; color: #666;">
+                                <strong>Note:</strong> This tool uses GPT-3.5 Turbo AI model to provide creative and sustainable solutions. Results are generated in real-time.
+                            </p>
                         </div>
-                        
-                        <p class="card-text wow fadeInUp" data-wow-delay="0.2s">
-                            Our AI-powered Upcycling Idea Generator uses advanced artificial intelligence to transform waste materials into creative, sustainable innovations. Simply enter any waste material you have, and our AI will generate 10 unique, practical ideas to breathe new life into your discarded items.
-                        </p>
-                        
-                        <h5 class="mt-4 mb-3 wow fadeInUp" data-wow-delay="0.3s" style="color: #89D289;">
-                            How it Works:
-                        </h5>
-                        <ul class="list-unstyled wow fadeInUp" data-wow-delay="0.4s">
-                            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #89D289;"></i> Enter your waste material name</li>
-                            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #89D289;"></i> AI analyzes and generates creative ideas</li>
-                            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #89D289;"></i> Receive practical upcycling suggestions</li>
-                            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #89D289;"></i> Join the zero-waste movement</li>
-                        </ul>
-                        
-                        <p class="card-text mt-4 wow fadeInUp" data-wow-delay="0.5s" style="font-size: 0.95rem; color: #666;">
-                            <strong>Note:</strong> This tool uses GPT-3.5 Turbo AI model to provide creative and sustainable solutions for upcycling. Results are generated in real-time based on your input.
-                        </p>
-                    </div>
-                </div>
+
+                        <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                            <div class="position-relative overflow-hidden h-100 rounded">
+                                <img class="img-fluid w-100" src="img/ai.png" alt="AI Technology" style="object-fit: cover; min-height: 400px;">
+                            </div>
+                        </div>
+
+                    </div> </div>
             </div>
         </div>
     </div>
+</div>
 
     <div class="container py-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card shadow-sm white-pop bg-secondary">
                     <div class="card-body card-popin p-4">
-                        <h2 class="card-title mb-3 text-uppercase wow fadeInUp" data-wow-delay="0.1s" style="color: #89D289;"> Upcycling Idea Generator</h2>
+                        <div class="text-left">
+                            <div class="title wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="title-left">
+                                    <h5 class="text-uppercase" style="color: #89D289;">artificial intelligence</h5>
+                                    <h1 class="display-6">Ai idea generator</h1>
+                                </div>
+                            </div>
+                        </div>
                         <p class="card-text mb-4 wow fadeInUp" data-wow-delay="0.2s">Enter the waste materials you have:</p>
 
                         <form id="upcycleForm" class="row g-2 align-items-center wow fadeInUp" data-wow-delay="0.3s" onsubmit="return false;">
@@ -167,13 +216,13 @@
                         class="fa-solid fa-recycle me-1"></i>Eco-Match</h1>
             </a>
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-lg-square btn-outline border-2 m-1" href="https://x.com" target="_blank" style="border-color: #89D289;color: #89D289;"><i
+                <a class="btn btn-lg-square btn-outline border-2 m-1 btn-custom-green" href="https://x.com" target="_blank" style="border-color: #89D289;color: #89D289;"><i
                         class="fab fa-x-twitter"></i></a>
-                <a class="btn btn-lg-square btn-outline border-2 m-1" href="https://instagram.com" target="_blank" style="border-color: #89D289; color: #89D289;"><i
+                <a class="btn btn-lg-square btn-outline border-2 m-1 btn-custom-green" href="https://instagram.com" target="_blank" style="border-color: #89D289; color: #89D289;"><i
                         class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-lg-square btn-outline border-2 m-1" href="https://youtube.com" target="_blank" style="border-color: #89D289; color: #89D289;"><i
+                <a class="btn btn-lg-square btn-outline border-2 m-1 btn-custom-green" href="https://youtube.com" target="_blank" style="border-color: #89D289; color: #89D289;"><i
                         class="fab fa-youtube"></i></a>
-                <a class="btn btn-lg-square btn-outline border-2 m-1" href="https://linkedin.com" target="_blank" style="border-color: #89D289; color: #89D289;"><i
+                <a class="btn btn-lg-square btn-outline border-2 m-1 btn-custom-green" href="https://linkedin.com" target="_blank" style="border-color: #89D289; color: #89D289;"><i
                         class="fab fa-linkedin-in"></i></a>
             </div>
             <p>&copy;Group 10, All Right Reserved.</p>
@@ -189,7 +238,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-outline border-2 btn-lg-square back-to-top" style="border-color: #89D289; color: #89D289;"><i class="bi bi-arrow-up"></i></a>
+<a href="#" class="btn btn-outline border-2 btn-lg-square back-to-top btn-custom-green"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
